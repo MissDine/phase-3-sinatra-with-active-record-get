@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     games.to_json
   end
 
-  # use the :id syntax to create a dynamic route
+  # use the params[:id] syntax to create a dynamic route
   get '/games/:id' do
     game = Game.find(params[:id])
 
